@@ -7,8 +7,11 @@ STEAM_PATH = r"E:\Steam"  # Путь к Steam
 # ИГРЫ ДЛЯ СОХРАНЕНИЯ (название папки: ID игры)
 KEEP_GAMES = {
     "Counter-Strike Global Offensive": "730",
-    "Dota 2": "570",
-    "PUBG": "578080"
+    "dota 2 beta": "570",
+    "Deadlock": "1422450",
+    "Steamworks Shared": "228980",
+    "PUBG": "578080",
+    "pubg": "578080",
 }
 # =====================
 
@@ -20,13 +23,6 @@ def main():
     print("\nGames to KEEP:")
     for game, game_id in KEEP_GAMES.items():
         print(f"  ✅ {game} (ID: {game_id})")
-    
-    print("\n⚠️  ALL OTHER GAMES WILL BE DELETED!")
-    confirm = input("\nContinue? (Y/N): ").upper()
-    
-    if confirm != 'Y':
-        print("Operation cancelled.")
-        return
     
     # Счетчики
     deleted_folders = 0
