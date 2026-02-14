@@ -91,17 +91,15 @@ def main():
     print("\n" + "=" * 50)
     print("COMPLETE!".center(50))
     print("=" * 50)
-    print(f"📊 Statistics:")
+    print("📊 Statistics:")
     print(f"  🗑️  Game folders deleted: {deleted_folders}")
     print(f"  🗑️  Manifests deleted: {deleted_manifests}")
     print(f"  🗑️  User data deleted: {deleted_userdata}")
     print("\n🔄 Restart Steam to see changes.")
-    input("\nPress Enter to exit...")
 
 if __name__ == "__main__":
     # Проверяем путь
     if not os.path.exists(STEAM_PATH):
         print(f"❌ Error: Steam path not found: {STEAM_PATH}")
-        input("Press Enter to exit...")
     else:
         main()
